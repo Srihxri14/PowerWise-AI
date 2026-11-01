@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Electricity Calculator | PowerWise AI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">PowerWise AI</div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="building-calculator.html" class="active">Building Calculator</a>
+      <a href="tips.html">Efficiency Tips</a>
+      <a href="convert.html">Convert Data</a>
+      <a href="about.html">About</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open navigation">☰</button>
+  </header>
+
+  <main class="page-container">
+    <section class="panel">
+      <h1>Building Electricity Requirements Calculator</h1>
+      <p>Estimate electricity consumption for different types of buildings and establishments. Get detailed breakdowns and optimization recommendations.</p>
+
+      <div class="predict-grid">
+        <div class="card">
+          <h2>Building Parameters</h2>
+          <label>Building Type</label>
+          <select id="building-type">
+            <option value="house">🏠 Residential House</option>
+            <option value="apartment">🏢 Apartment Building</option>
+            <option value="restaurant">🍽️ Restaurant</option>
+            <option value="cinema">🎬 Cinema Hall</option>
+            <option value="office">🏢 Office Building</option>
+            <option value="mall">🛍️ Shopping Mall</option>
+            <option value="hospital">🏥 Hospital</option>
+            <option value="school">🏫 School/College</option>
+            <option value="hotel">🏨 Hotel</option>
+            <option value="factory">🏭 Factory</option>
+          </select>
+
+          <label>Building Size (sq ft)</label>
+          <input id="building-size" type="number" min="100" max="100000" value="2000" />
+
+          <label>Occupancy (people)</label>
+          <input id="occupancy" type="number" min="1" max="10000" value="4" />
+
+          <label>Operating Hours per Day</label>
+          <input id="operating-hours" type="number" min="1" max="24" value="12" />
+
+          <label>Location Temperature (°C)</label>
+          <input id="location-temp" type="number" step="0.1" value="25" />
+
+          <button id="calculate-btn" class="btn btn-primary">Calculate Electricity Needs</button>
+        </div>
+
+        <div class="card stats-card">
+          <h2>Electricity Requirements</h2>
+          <div id="calculation-result" class="preview-box">Select building type and parameters to calculate electricity requirements.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel analytics-panel">
+      <h2>Energy Breakdown Analysis</h2>
+      <div class="chart-layout">
+        <div class="chart-card">
+          <h3>Daily Consumption Breakdown</h3>
+          <canvas id="daily-breakdown-chart"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Monthly Cost Estimation</h3>
+          <canvas id="monthly-cost-chart"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Efficiency Recommendations</h3>
+          <canvas id="efficiency-recommendations"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Peak Load Analysis</h3>
+          <canvas id="peak-load-chart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Building Type Guidelines</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>🏠 Residential</h3>
+          <p>Houses and apartments with lighting, appliances, HVAC, and entertainment systems.</p>
+        </div>
+        <div class="info-card">
+          <h3>🍽️ Commercial</h3>
+          <p>Restaurants, hotels, and retail spaces with high lighting and equipment loads.</p>
+        </div>
+        <div class="info-card">
+          <h3>🏢 Offices</h3>
+          <p>Computer equipment, lighting, and HVAC systems for productivity spaces.</p>
+        </div>
+        <div class="info-card">
+          <h3>🏭 Industrial</h3>
+          <p>Machinery, manufacturing equipment, and heavy-duty electrical systems.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>PowerWise AI © 2026 · Smart Building Energy Planning.</p>
+  </footer>
+
+  <script src="js/building-calculator.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | PowerWise AI</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="brand">PowerWise AI</div>
+
+<nav class="site-nav">
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="analytics.html">Analytics</a>
+<a href="building-calculator.html">Building Calculator</a>
+<a href="tips.html">Efficiency Tips</a>
+<a href="convert.html">Convert Data</a>
+<a href="about.html">About</a>
+</nav>
+
+</header>
+
+<main class="page-container">
+
+<section class="panel">
+
+<h1>Energy Prediction Dashboard</h1>
+
+<div id="input-container" class="input-grid"></div>
+
+<button id="predict-button" class="btn btn-primary">
+Predict Energy
+</button>
+
+</section>
+
+
+<section class="panel">
+
+<h2>Prediction Result</h2>
+
+<div class="prediction-grid">
+
+<div class="prediction-box">
+<h3>⚡ Energy Consumption</h3>
+<p id="consumption-value">--</p>
+</div>
+
+<div class="prediction-box">
+<h3>⚠️ Energy Wastage</h3>
+<p id="wastage-value">--</p>
+</div>
+
+</div>
+
+<div id="prediction-message" class="prediction-message">
+Waiting for prediction...
+</div>
+
+</section>
+
+
+<section class="panel">
+
+<h2>Analytics Charts</h2>
+
+<div class="chart-grid">
+
+<canvas id="consumption-chart"></canvas>
+
+<canvas id="pie-chart"></canvas>
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+PowerWise AI © 2026
+</footer>
+
+<script src="js/utils.js"></script>
+<script src="js/model.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

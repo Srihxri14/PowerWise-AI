@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Dataset | PowerWise AI</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- TensorFlow -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.11.0/dist/tf.min.js"></script>
+
+  <!-- Charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="brand">PowerWise AI</div>
+
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="analytics.html">Analytics</a>
+    <a href="building-calculator.html">Building Calculator</a>
+    <a href="tips.html">Efficiency Tips</a>
+    <a href="convert.html">Convert Data</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <button class="nav-toggle">☰</button>
+</header>
+
+
+<main class="page-container">
+
+<section class="panel">
+
+<h1>Upload Dataset and Train Model</h1>
+
+<p>
+Upload CSV file and train AI model for electricity prediction and wastage detection.
+</p>
+
+<p style="background: rgba(37, 214, 169, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--accent-2); margin: 1rem 0;">
+<strong>Tip:</strong> Click Load Sample Dataset if you don't have CSV file.
+</p>
+
+
+<div class="upload-grid">
+
+<div class="card">
+
+<label class="file-label" for="data-file">
+➕ Ignite AI with CSV data
+</label>
+
+<input 
+id="data-file" 
+type="file" 
+accept=".csv"
+/>
+
+<button 
+id="load-sample-button" 
+class="btn btn-secondary" 
+style="margin-top: 1rem;"
+>
+Load Sample Dataset
+</button>
+
+</div>
+
+
+<div class="card stats-card">
+
+<h2>Dataset Preview</h2>
+
+<div 
+id="preview" 
+class="preview-box"
+>
+No data loaded yet.
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="actions-row">
+
+<button 
+id="train-sample-button" 
+class="btn btn-primary"
+>
+Train Sample Dataset Now
+</button>
+
+<button 
+id="train-button" 
+class="btn btn-primary"
+>
+Train Model
+</button>
+
+<button 
+id="clear-button" 
+class="btn btn-secondary"
+>
+Clear
+</button>
+
+</div>
+
+
+<div 
+id="status-panel" 
+class="status-panel hidden"
+>
+</div>
+
+</section>
+
+
+
+<section class="panel analytics-panel">
+
+<h2>Training Analytics</h2>
+
+<div class="chart-card">
+<canvas id="loss-chart"></canvas>
+</div>
+
+
+<div class="info-grid">
+
+<div class="info-card">
+<h3>AI Feature</h3>
+<p>
+Model learns consumption and wastage patterns
+</p>
+</div>
+
+<div class="info-card">
+<h3>Saved Model</h3>
+<p>
+Training saved locally for prediction
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer class="site-footer">
+<p>
+PowerWise AI © 2026 · Train locally, predict instantly.
+</p>
+</footer>
+
+
+<!-- Scripts -->
+
+<script defer src="js/utils.js"></script>
+<script defer src="js/model.js"></script>
+<script defer src="js/converter.js"></script>
+<script defer src="js/app.js"></script>
+
+
+</body>
+</html>

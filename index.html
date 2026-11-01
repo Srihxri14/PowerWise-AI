@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electricity AI Monitor</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header class="site-header">
+    <div class="brand">PowerWise AI</div>
+
+    <nav class="site-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="upload.html">Upload</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="building-calculator.html">Building Calculator</a>
+      <a href="tips.html">Efficiency Tips</a>
+      <a href="convert.html">Convert Data</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <button class="nav-toggle">☰</button>
+  </header>
+
+
+  <!-- Main -->
+
+  <main>
+
+    <!-- Hero -->
+
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Electricity Consumption & Wastage Forecasting</h1>
+
+        <p>
+          Upload your dataset, train AI model and predict electricity usage 
+          with smart analytics and visual dashboards.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="upload.html">
+            Upload Data
+          </a>
+
+          <a class="btn btn-secondary" href="dashboard.html">
+            View Dashboard
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+        <div class="pulse-chart"></div>
+      </div>
+
+    </section>
+
+
+
+    <!-- Features -->
+
+    <section class="features-grid">
+
+      <article>
+        <h2>Responsive Interface</h2>
+        <p>
+          Works smoothly on desktop and mobile devices.
+        </p>
+      </article>
+
+      <article>
+        <h2>AI Training</h2>
+        <p>
+          Train ML model directly in browser.
+        </p>
+      </article>
+
+      <article>
+        <h2>Smart Predictions</h2>
+        <p>
+          Predict electricity consumption and wastage.
+        </p>
+      </article>
+
+      <article>
+        <h2>Analytics Dashboard</h2>
+        <p>
+          Visual charts and insights for decision making.
+        </p>
+      </article>
+
+    </section>
+
+
+
+    <!-- Workflow -->
+
+    <section class="workflows">
+
+      <div>
+        <h2>How it Works</h2>
+
+        <ol>
+          <li>Upload CSV dataset</li>
+          <li>Train AI model</li>
+          <li>Predict electricity consumption</li>
+          <li>Analyze wastage</li>
+        </ol>
+
+      </div>
+
+
+      <div class="workflow-card">
+
+        <h3>Universal Dataset Support</h3>
+
+        <p>
+          Upload any dataset with any column names.
+          System automatically adapts.
+        </p>
+
+        <div class="sample-downloads">
+
+          <a class="btn btn-secondary"
+             href="data/sample_dataset.csv"
+             download>
+
+            Basic Sample
+
+          </a>
+
+
+          <a class="btn btn-secondary"
+             href="data/universal_sample.csv"
+             download>
+
+            Universal Sample
+
+          </a>
+
+
+          <a class="btn btn-secondary"
+             href="data/flexible_sample.csv"
+             download>
+
+            Flexible Sample
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- Footer -->
+
+  <footer class="site-footer">
+    <p>
+      PowerWise AI © 2026  
+      Smart Electricity Analytics
+    </p>
+  </footer>
+
+
+
+  <!-- Scripts (IMPORTANT ORDER) -->
+
+  <script defer src="js/utils.js"></script>
+<script defer src="js/model.js"></script>
+<script defer src="js/app.js"></script>
+
+
+</body>
+</html>
